@@ -1,8 +1,8 @@
-resource "aws_instance" "web-server" {
-   ami = "var.AMI_ID"
-   instance_type = var.Instance_type
+resource "aws_instance" "web" {
+  ami           = var.AMI_ID
+  instance_type = var.instance_type
 
-   tags = {
-    Name = "airbnb-web-server"
+  tags = {
+    Name = "airbnb-server"
   }
 }
